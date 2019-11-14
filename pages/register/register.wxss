@@ -30,6 +30,7 @@
 }
 
 .text-w {
+  margin-top: 4px;
   font-size: 18px;
   width: 80px;
   text-align: center;
@@ -43,4 +44,8 @@
 
 .logo {
   width: 50px;
+}
+
+.button {
+  font-size: 18px;
 }

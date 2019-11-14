@@ -1,7 +1,7 @@
 <view class="mainbox">
   <view class="top-box">
     <image class="logo" src="../image/nnxy.jpg" mode="widthFix"></image>
-    <view style="font-size:25px;">南宁学院快印中心</view>
+    <view class="logo-text">南宁学院快印中心</view>
   </view>
   <!-- 输入框和登录按钮 -->
   <view class="mid-box">
@@ -12,11 +12,11 @@
       <input bindinput="inputPwd" class="input-border" placeholder="请输入您的密码" password="true"></input>
     </view>
     <view class="bot-button">
-      <button type="primary" style="font-size:18px" bindtap="loginTap">登陆</button>
+      <button type="primary" bindtap="loginTap">登陆</button>
     </view>
   </view>
   <view class="bot-box">
-    <view style="flex:1;font-size:18px" bindtap="register">注册账号</view>
-    <view style="font-size:18px">忘记密码</view>
+    <view class="hrcf" style="flex:1;" bindtap="register">注册账号</view>
+    <view class="hrcf" >忘记密码</view>
   </view>
 </view>

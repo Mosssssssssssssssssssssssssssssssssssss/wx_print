@@ -1,2 +1,5 @@
-<!--pages/main/main.wxml-->
-<text>asdg</text>
+<button class="btn-log" bindtap="print">
+<image class="logo" src="../image/newprint.png" mode="widthFix"></image>
+</button>
+<button class="btn" bindtap="">当前队列</button>
+<button class="btn" bindtap="">我的预约</button>

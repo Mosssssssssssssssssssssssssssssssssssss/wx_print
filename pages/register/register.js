@@ -23,6 +23,9 @@ Page({
         },
         success(res) {
           if (res.data.status == "success") {
+            wx.navigateBack({
+              url:'/pages/login/login',
+            })
             wx.showToast({
               title: res.data.msg,
             })

@@ -1,0 +1,46 @@
+.main-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.input{
+  font-size: 18px;
+  width: 230px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.picker{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.section__title{
+  margin-right: 20px;
+  font-size: 18px;
+}
+.section{
+  margin:20px;
+}
+.textarea{
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  padding: 10px;
+}
+.note__title{
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.label{
+  margin-right: 10px;
+  font-size: 18px;
+}
+.button{
+  margin:10px;
+  font-size: 18px;
+}

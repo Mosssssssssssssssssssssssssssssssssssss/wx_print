@@ -7,10 +7,6 @@ Page({
   data: {
     unmber: null,
     password: null,
-    // student:{
-    //   num:"",
-    //   age:"",
-    // }
   },
   loginTap() {
     console.log("登陆");
@@ -21,7 +17,11 @@ Page({
         "password": this.data.password
       },
       success(res) {
+        //跳转到主页面
         if (res.data.status == "success") {
+          //将登陆成功后返回的用户信息存储到缓存中
+          console.log(res.data.object)
+          wx.setStorageSync("user", res.data.object)
           wx.switchTab({
             url: '/pages/main/main',
           })
@@ -31,7 +31,7 @@ Page({
         } else {
           wx.showToast({
             title: res.data.msg,
-            icon: "none",
+            icon: "none"
           })
         }
       }
@@ -60,56 +60,56 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })
