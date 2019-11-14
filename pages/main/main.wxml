@@ -2,4 +2,5 @@
 <image class="logo" src="../image/newprint.png" mode="widthFix"></image>
 </button>
 <button class="btn" bindtap="">当前队列</button>
-<button class="btn" bindtap="">我的预约</button>
+<button class="btn" bindtap="onLoad">我的预约</button>
+<button class="btn" bindtap="upload">文件上传</button>
