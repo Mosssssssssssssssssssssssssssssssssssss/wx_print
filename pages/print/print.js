@@ -26,7 +26,6 @@ Page({
       url: 'http://localhost:8080/print',
       method: "post",
       data:{
-        "size":100,
         "number":user.number,
         "pageSize":e.detail.value.pageSize,
         "printStyle":e.detail.value.printStyle,

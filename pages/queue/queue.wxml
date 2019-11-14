@@ -1,0 +1,30 @@
+<view class="order" wx:for="{{array}}">
+  编号:{{index}}
+  学号:{{array[index].number}}
+  纸张规格:{{array[index].pageSize}}
+  <!-- 文件大小:{{array[index].size}} -->
+  打印面:{{array[index].printStyle}}
+  纸张颜色:{{array[index].printColor}}
+  备注:{{array[index].note}}
+  创建时间:{{array[index].gmtCreate}}
+  修改时间:{{array[index].gmtModify}}
+  状态:
+  <view style="flex:1;" wx:if="{{array[index].flag==0}}">
+    排队中
+  </view>
+  <view style="flex:1;"  wx:elif="{{array[index].flag==1}}">
+    打印中
+  </view>
+  <view style="flex:1;"  wx:elif="{{array[index].flag==2}}">
+    待取件
+  </view>
+  <view  wx:elif="{{array[index].flag==3}}">
+    已取消
+  </view>
+  <view wx:elif="{{array[index].flag==4}}">
+    已完成
+  </view>
+  <view wx:else>
+    ERROR
+  </view>
+</view>
