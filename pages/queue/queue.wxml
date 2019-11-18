@@ -1,30 +1,42 @@
-<view class="order" wx:for="{{array}}">
-  编号:{{index}}
-  学号:{{array[index].number}}
-  纸张规格:{{array[index].pageSize}}
-  <!-- 文件大小:{{array[index].size}} -->
-  打印面:{{array[index].printStyle}}
-  纸张颜色:{{array[index].printColor}}
-  备注:{{array[index].note}}
-  创建时间:{{array[index].gmtCreate}}
-  修改时间:{{array[index].gmtModify}}
-  状态:
-  <view style="flex:1;" wx:if="{{array[index].flag==0}}">
-    排队中
-  </view>
-  <view style="flex:1;"  wx:elif="{{array[index].flag==1}}">
-    打印中
-  </view>
-  <view style="flex:1;"  wx:elif="{{array[index].flag==2}}">
-    待取件
-  </view>
-  <view  wx:elif="{{array[index].flag==3}}">
-    已取消
-  </view>
-  <view wx:elif="{{array[index].flag==4}}">
-    已完成
-  </view>
-  <view wx:else>
-    ERROR
+<view class="main">
+  <view class="order" wx:for="{{array}}">
+    <view>
+      <text class="{{item.number==user.number?'item-me':'item-other'}}">编号:{{index}}</text>
+    </view>
+    <view style="display:flex;flex-direction: row;">
+      <view>
+        <text>纸张规格: {{array[index].pageSize}}</text>
+      </view>
+      <view style="margin-left:30px;margin-right: 30px;">
+        <text>打印面: {{array[index].printStyle}}</text>
+      </view>
+      <view>
+        <text>纸张颜色: {{array[index].printColor}}</text>
+      </view>
+    </view>
+    <view><text>备注: {{array[index].note}}</text></view>
+    <!-- <text style="font-size:12px">创建时间: {{array[index].gmtCreate}} 修改时间: {{array[index].gmtModify}}</text> -->
+    <view style="display:flex;flex-direction: row;float:right">
+      <text>状态: </text>
+      <view wx:if="{{array[index].flag==0}}">
+        <text>排队中</text>
+      </view>
+      <view wx:elif="{{array[index].flag==1}}">
+        <text>打印中</text>
+      </view>
+      <view wx:elif="{{array[index].flag==2}}">
+        <text>待取件</text>
+      </view>
+      <view wx:elif="{{array[index].flag==3}}">
+        <text>已取消</text>
+      </view>
+      <view wx:elif="{{array[index].flag==4}}">
+        <text>已完成</text>
+      </view>
+      <view wx:else>
+        ERROR
+      </view>
+    </view>
+    <view style="clear:both"></view>
   </view>
 </view>

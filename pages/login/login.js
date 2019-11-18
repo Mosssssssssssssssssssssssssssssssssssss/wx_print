@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    unmber: null,
+    number: null,
     password: null,
   },
   loginTap() {

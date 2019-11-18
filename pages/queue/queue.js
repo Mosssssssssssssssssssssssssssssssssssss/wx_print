@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array:null
+    array:null,
+    user:null
   },
 
   /**
@@ -18,9 +19,11 @@ Page({
       method: 'GET',
       success(res) {
         console.log(res.data);
-        that.setData({ ['array']: res.data });
+        that.setData({array:res.data});
       }
     })
+    var appuser = wx.getStorageSync("user");
+    this.setData({ user: appuser})
   },
 
   /**

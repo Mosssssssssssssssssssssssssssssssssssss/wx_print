@@ -31,6 +31,9 @@
         <radio value="其他" />其他</label>
     </radio-group>
   </view>
+  <view>
+    <button type="primary" size="mini" bindtap="selectFile">选择文件</button><span>{{file.name==''?'请选择文件':file.name}}</span>
+  </view>
   <view class="section">
   <view class="note__title">备注</view>
     <textarea class="textarea" name="note"  bindblur="bindTextAreaBlur" placeholder="请补充打印信息" />
